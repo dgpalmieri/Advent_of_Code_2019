@@ -5,6 +5,12 @@
 
 
 def main():
-    print("Hello!")
+    sum = 0
+    with open('./input/day1.txt', 'r') as fp:
+        for fuel in fp:
+            round = int(int(fuel)/3) - 2
+            sum += round
+    print(sum)
+
 
 main()
