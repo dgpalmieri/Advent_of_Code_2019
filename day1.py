@@ -8,8 +8,12 @@ def main():
     sum = 0
     with open('./input/day1.txt', 'r') as fp:
         for fuel in fp:
-            round = int(int(fuel)/3) - 2
-            sum += round
+            round = int(fuel)
+            while True:
+                round = int(round/3) - 2
+                if round < 0:
+                    break
+                sum += round
     print(sum)
 
 
